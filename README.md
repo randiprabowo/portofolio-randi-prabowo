@@ -4,22 +4,22 @@ A bilingual Next.js App Router portfolio with an embedded Sanity Studio. English
 
 ## Run locally
 
-Use Node.js 24 and npm. From the repository root, run:
+Use Node.js 24 and npm. First copy `.env.example` to `.env.local` to connect to the portfolio’s existing public dataset. Then run these commands from the repository root.
 
 ```sh
 npm ci
-npm run dev
+npm run dev -- --port 3333
 ```
 
-Open [the portfolio](http://localhost:3000/en) or [Studio](http://localhost:3000/studio). The root redirects to English. The URL stores the language choice. On Windows, `npm.cmd` also works when PowerShell blocks `npm.ps1`.
+Open [the portfolio](http://localhost:3333/en) or [Studio](http://localhost:3333/studio). This project permits credentialed Studio requests from `http://localhost:3333`. The root redirects to English. On Windows, `npm.cmd` also works when PowerShell blocks `npm.ps1`.
 
 With both Sanity variables empty, the public site previews the supplied portfolio records in `content/seed.json`. Studio shows connection instructions. Setting just one variable produces a configuration error. With both set, the public pages use published Sanity records exclusively. An empty dataset shows empty states, and an unavailable dataset surfaces an error.
 
 ## Connect the CMS
 
-1. Create a Sanity project and a public dataset in the owner’s account. Record the project ID and dataset name.
-2. Copy `.env.example` to `.env.local`. Set `NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET`. The API version is pinned in the example. Leave private credentials out of public variables.
-3. In the project’s API settings, add the local origin (usually `http://localhost:3000`) as a CORS origin with credentials enabled for Studio sign-in. Add the actual deployed origin when available.
+1. Use the existing project and public dataset identified by `NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET` in `.env.example`.
+2. Copy that file to the Git-ignored `.env.local`. Its public identifiers and pinned API version are sufficient for the portfolio to read published content.
+3. Use the local origin above for Studio. If you use a different host or port, add that exact origin in the project’s API settings with credentials enabled for Studio sign-in.
 4. Restart Next.js and open `/studio`. Sign in with a Sanity account that has editing access to this project. Studio uses the member’s session. Public pages use anonymous read access.
 5. To import the brief-derived records, sign in to the CLI with the same account, check the target project and dataset in `.env.local`, and run:
 
