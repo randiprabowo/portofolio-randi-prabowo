@@ -31,6 +31,7 @@ export interface Settings extends RecordBase {
   resumeLabel?: Localized;
   resumeLanguage?: Locale;
   email?: string;
+  phone?: string;
 }
 export interface Period {
   startDate?: string;

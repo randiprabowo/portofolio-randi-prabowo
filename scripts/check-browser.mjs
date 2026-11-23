@@ -1,17 +1,18 @@
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { chromium } from "playwright-core";
+import { checkThemePreferences } from "./check-theme.mjs";
 const require = createRequire(import.meta.url);
 const origin = process.env.TEST_ORIGIN || "http://127.0.0.1:3000";
 const browser = await chromium.launch({
   channel: process.env.BROWSER_CHANNEL || undefined,
   headless: true,
 });
-const page = await browser.newPage({ reducedMotion: "reduce" });
-const errors = [];
-const internalPaths = new Set();
-page.on("pageerror", (error) => errors.push(error.message));
-try {
+async function checkPortfolio(colorScheme) {
+  const page = await browser.newPage({ reducedMotion: "reduce", colorScheme });
+  const errors = [];
+  const internalPaths = new Set();
+  page.on("pageerror", (error) => errors.push(error.message));
   for (const locale of ["en", "id"]) {
     await page.goto(origin + "/" + locale + "/projects");
     const projects = await page
@@ -28,6 +29,7 @@ try {
       const response = await page.goto(origin + path);
       assert.equal(response.status(), 200, path);
       assert.equal(await page.locator("html").getAttribute("lang"), locale);
+      assert.equal(await page.locator("html").evaluate(el => getComputedStyle(el).colorScheme), colorScheme);
       assert.equal(await page.locator("main h1").count(), 1, path);
       const canonical = await page
         .locator('link[rel="canonical"]')
@@ -48,7 +50,7 @@ try {
         const target = new URL(href);
         if (target.origin === origin) internalPaths.add(target.pathname);
       }
-      for (const width of [320, 390, 768, 1024, 1440]) {
+      for (const width of [320, 390, 768, 851, 1024, 1440]) {
         await page.setViewportSize({ width, height: 900 });
         assert.ok(
           await page.evaluate(
@@ -121,15 +123,20 @@ try {
     ).status(),
     404,
   );
-  const noJs = await browser.newContext({ javaScriptEnabled: false });
+  const noJs = await browser.newContext({ javaScriptEnabled: false, colorScheme });
   const staticPage = await noJs.newPage();
   await staticPage.goto(origin + "/id");
   assert.ok(await staticPage.locator("main h1").isVisible());
+  assert.equal(await staticPage.locator("html").evaluate(el => getComputedStyle(el).colorScheme), colorScheme);
   await noJs.close();
   assert.deepEqual(errors, []);
-  console.log(
-    "Passed bilingual routes, project details, five viewport widths, axe WCAG checks, mobile keyboard focus, language navigation, 404 and no-JavaScript rendering.",
-  );
+  await page.close();
+  console.log(colorScheme + ": bilingual routes, six viewport widths, axe, keyboard, links and no-JavaScript rendering passed.");
+}
+try {
+  await checkPortfolio("dark");
+  await checkPortfolio("light");
+  await checkThemePreferences(browser, origin);
 } finally {
   await browser.close();
 }

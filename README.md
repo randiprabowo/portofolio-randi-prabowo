@@ -2,6 +2,8 @@
 
 A bilingual Next.js App Router portfolio with an embedded Sanity Studio. English and Indonesian share route segments so the language switch keeps the visitor on the same project. The design uses Space Grotesk, Inter, IBM Plex Mono, charcoal surfaces, and a lime accent. Fonts are served locally.
 
+The sun and moon controls in the navigation switch between light and dark mode. The portfolio and Studio follow the device setting until a visitor chooses a theme. The browser remembers that choice across visits and languages.
+
 ## Run locally
 
 Use Node.js 24 and npm. First copy `.env.example` to `.env.local` to connect to the portfolio’s existing public dataset. Then run these commands from the repository root.
@@ -21,14 +23,14 @@ With both Sanity variables empty, the public site previews the supplied portfoli
 2. Copy that file to the Git-ignored `.env.local`. Its public identifiers and pinned API version are sufficient for the portfolio to read published content.
 3. Use the local origin above for Studio. If you use a different host or port, add that exact origin in the project’s API settings with credentials enabled for Studio sign-in.
 4. Restart Next.js and open `/studio`. Sign in with a Sanity account that has editing access to this project. Studio uses the member’s session. Public pages use anonymous read access.
-5. To import the brief-derived records, sign in to the CLI with the same account, check the target project and dataset in `.env.local`, and run:
+5. Review the 43 résumé records in `content/review/preview.html`. After owner approval, sign in to the CLI with an editing account and run the import from the repository root.
 
 ```sh
 npx sanity login
-npm run cms:seed
+npm run cms:import-resume
 ```
 
-The explicit import creates missing records in one transaction. Existing document IDs retain their content. Run the seed during initial setup. Running it after intentionally deleting seed records can recreate them. No import occurs during build or page requests.
+The import targets `fpaz2q9j/production`. It checks the reviewed portrait and PDF against their content hashes, uploads both assets, and links the returned references on `siteSettings`. It publishes the 43 records in one document transaction. Rerunning updates the fields supplied in `content/review/resume.json` at the same document IDs, including any of those fields edited in Studio since the last run.
 
 ## Manage content
 
@@ -45,7 +47,7 @@ Fill both languages for each localized field you use. For images, upload an owne
 
 Use **Publish** to release changes. Drafts remain private to authorized Studio members. Use the document actions to unpublish or delete an entry. Smaller display-order values appear first. Featured projects precede other projects. The public site revalidates on requests after a 60-second cache interval. The first request after expiry can receive the previous version while Next.js refreshes it.
 
-The seed follows the supplied brief. BROD and EduAkses have no verified image, repository or demo URL. The portrait, CV, email, social profiles, work dates, credentials and availability await the owner’s input. Solvera is an unpublished draft pending confirmation of the official employer name. Review both languages and dates before release.
+BROD and EduAkses are the two featured résumé projects. Project dates, screenshots, repository and demo URLs, certification dates and credential URLs remain available for the owner to supply in Studio.
 
 ## Deploy with Vercel
 

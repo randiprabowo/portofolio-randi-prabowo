@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
+import { ThemeSwitch } from "./ThemeSwitch";
 import { pathFor, routes, shell, type Locale } from "@/lib/locale";
 
 export function Header({
@@ -64,6 +65,7 @@ export function Header({
               </Link>
             ))}
           </div>
+          <ThemeSwitch locale={locale} />
           {resume && (
             <a className="header-cv" href={resume.url}>
               {resume.label}

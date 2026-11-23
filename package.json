@@ -12,6 +12,7 @@
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
     "cms:seed": "sanity exec scripts/seed.mjs --with-user-token",
+    "cms:import-resume": "sanity exec scripts/import-resume.mjs --with-user-token",
     "test:browser": "node scripts/check-browser.mjs",
     "test:content": "node --test scripts/check-content.mjs"
   },

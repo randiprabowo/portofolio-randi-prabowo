@@ -20,6 +20,9 @@ export const shell = {
     menu: "Menu",
     footer: "Footer navigation",
     home: "Home",
+    theme: "Color theme",
+    light: "Light mode",
+    dark: "Dark mode",
   },
   id: {
     pages: ["Beranda", "Tentang", "Pengalaman", "Proyek", "Kontak"],
@@ -28,6 +31,9 @@ export const shell = {
     menu: "Menu",
     footer: "Navigasi kaki halaman",
     home: "Beranda",
+    theme: "Tema warna",
+    light: "Mode terang",
+    dark: "Mode gelap",
   },
 };
 export function pathFor(locale: Locale, route: string = "") {

@@ -2,6 +2,8 @@ import "@fontsource-variable/space-grotesk/wght.css";
 import "@fontsource-variable/inter/wght.css";
 import "@fontsource/ibm-plex-mono/latin-400.css";
 import "../globals.css";
+import "../theme.css";
+import { themeBootstrap } from "@/lib/theme";
 import { locales, readLocale, shell } from "@/lib/locale";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -22,7 +24,8 @@ export default async function Layout({
   const locale = readLocale((await params).locale);
   const [profile, socials] = await Promise.all([getSettings(), getSocials()]);
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{ __html: themeBootstrap }} /></head>
       <body>
         <a className="skip-link" href="#main">
           {shell[locale].skip}

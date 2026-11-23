@@ -1,0 +1,24 @@
+:root {
+  color-scheme: dark;
+  --bg: light-dark(#f7f6f0, #101110);
+  --surface: light-dark(#eeeee6, #171917);
+  --text: light-dark(#20231c, #f1f2ec);
+  --muted: light-dark(#565c50, #a3a79f);
+  --line: light-dark(rgb(38 47 31 / 22%), rgb(241 242 236 / 17%));
+  --accent: light-dark(#466419, #c7f36b);
+  --action-bg: #c7f36b;
+  --action-hover: #d7ff8a;
+  --on-action: #101110;
+  --plate-ink: light-dark(#535c4c, #c7c9c0);
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+  }
+}

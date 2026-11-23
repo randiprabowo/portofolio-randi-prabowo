@@ -23,6 +23,7 @@ const en = {
   live: "Live project",
   github: "GitHub",
   email: "Email",
+  phone: "Phone",
   portrait: "Portrait pending",
   cover: "Project cover pending",
   credential: "View credential",
@@ -41,12 +42,13 @@ const en = {
     course: "Course",
   },
   groups: {
+    programming: "Programming & frameworks",
     frontend: "Frontend",
     backend: "Backend",
     database: "Database",
-    tools: "Tools",
-    collaboration: "Collaboration",
-    design: "Design",
+    tools: "Tools & technologies",
+    collaboration: "Collaboration & management",
+    design: "Design & others",
   },
 };
 const id: typeof en = {
@@ -73,6 +75,7 @@ const id: typeof en = {
   live: "Situs proyek",
   github: "GitHub",
   email: "Surel",
+  phone: "Telepon",
   portrait: "Foto profil belum tersedia",
   cover: "Sampul proyek belum tersedia",
   credential: "Lihat kredensial",
@@ -91,12 +94,13 @@ const id: typeof en = {
     course: "Kursus",
   },
   groups: {
+    programming: "Pemrograman & kerangka kerja",
     frontend: "Frontend",
     backend: "Backend",
     database: "Basis data",
-    tools: "Peralatan",
-    collaboration: "Kolaborasi",
-    design: "Desain",
+    tools: "Alat & teknologi",
+    collaboration: "Kolaborasi & manajemen",
+    design: "Desain & lainnya",
   },
 };
 export const ui: Record<Locale, typeof en> = { en, id };

@@ -22,7 +22,11 @@ export default async function Contact({
             </a>
           </div>
         )}
-        {!profile?.email && !socials.length && (
+        {profile?.phone && <div className="fact">
+          <p className="meta">{ui[locale].phone}</p>
+          <a className="inline-link" href={"tel:" + profile.phone.replace(/[^+\d]/g, "")}>{profile.phone}</a>
+        </div>}
+        {!profile?.email && !profile?.phone && !socials.length && (
           <p className="lede">{ui[locale].noContact}</p>
         )}
         <SocialLinks links={socials} locale={locale} />

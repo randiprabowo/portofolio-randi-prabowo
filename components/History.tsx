@@ -7,7 +7,7 @@ export function period(item: Period, locale: Locale, current = false) {
   const format = (date?: string) =>
     date &&
     new Intl.DateTimeFormat(locale, {
-      month: "short",
+      month: date.length === 4 ? undefined : "long",
       year: "numeric",
       timeZone: "UTC",
     }).format(new Date(date));

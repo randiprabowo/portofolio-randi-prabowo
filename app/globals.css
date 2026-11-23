@@ -1,13 +1,6 @@
 @import "tailwindcss";
 @source not "../node_modules";
 :root {
-  color-scheme: dark;
-  --bg: #101110;
-  --surface: #171917;
-  --text: #f1f2ec;
-  --muted: #a3a79f;
-  --line: rgba(241, 242, 236, 0.17);
-  --accent: #c7f36b;
   --display: "Space Grotesk Variable", sans-serif;
   --body: "Inter Variable", sans-serif;
   --mono: "IBM Plex Mono", monospace;
@@ -44,12 +37,13 @@ summary:hover {
   top: 0.75rem;
   left: 0.75rem;
   padding: 0.75rem;
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--action-bg);
+  color: var(--on-action);
   transform: translateY(-170%);
 }
 .skip-link:focus {
   transform: none;
+  color: var(--on-action);
 }
 .site-header {
   position: sticky;
@@ -122,6 +116,37 @@ summary:hover {
 }
 .mobile-menu {
   display: none;
+}
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+}
+.theme-option {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.theme-option:hover, .theme-option:focus-visible {
+  color: var(--accent);
+}
+/* The active mark follows the first-paint palette even before React hydrates. */
+.theme-light {
+  box-shadow: inset 0 -2px light-dark(var(--accent), transparent);
+}
+.theme-dark {
+  box-shadow: inset 0 -2px light-dark(transparent, var(--accent));
+}
+@media (scripting: none) {
+  .theme-switch { display: none; }
+}
+@media (max-width: 460px) {
+  .header-row, .header-actions { gap: 4px; }
+}
+@media (min-width: 851px) and (max-width: 960px) {
+  .header-actions, .desktop-nav { gap: 14px; }
 }
 .site-footer {
   flex-wrap: wrap;
@@ -269,12 +294,12 @@ main.container {
   font-size: 0.9375rem;
 }
 .primary {
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--action-bg);
+  color: var(--on-action);
 }
 .primary:hover {
-  background: #d7ff8a;
-  color: var(--bg);
+  background: var(--action-hover);
+  color: var(--on-action);
 }
 .secondary {
   border: 1px solid var(--line);
@@ -343,7 +368,7 @@ main.container {
   font: 600 clamp(2rem, 14cqw, 8rem)/0.92 var(--display);
   letter-spacing: -0.08em;
   overflow-wrap: anywhere;
-  color: #c7c9c0;
+  color: var(--plate-ink);
 }
 .portrait .plate-type {
   font-size: 42cqw;
@@ -590,6 +615,10 @@ summary:active {
   opacity: 0.8;
 }
 @media (prefers-reduced-motion: no-preference) {
+  body, .site-header, .mobile-menu nav, .media {
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+  }
+  .theme-option,
   .desktop-nav a,
   .languages a,
   .button,

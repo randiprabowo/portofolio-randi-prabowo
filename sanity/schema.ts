@@ -74,17 +74,34 @@ const url = (name: string, title: string, required = false) =>
     validation: (r) =>
       (required ? r.required() : r).uri({ scheme: ["https", "http"] }),
   });
+// Existing Sanity dates are ISO strings. Also accept the lower precision used in CVs.
+function validPeriod(value?: string) {
+  if (!value) return true;
+  if (!/^\d{4}(-(?:0[1-9]|1[0-2])(-\d{2})?)?$/.test(value)) return "Use YYYY, YYYY-MM or YYYY-MM-DD.";
+  if (value.length < 10) return true;
+  const parsed = new Date(value);
+  return (!Number.isNaN(parsed.valueOf()) && parsed.toISOString().startsWith(value + "T")) || "Enter a valid calendar date.";
+}
 const dates = [
   defineField({
     name: "startDate",
-    type: "date",
+    type: "string",
     title: "Verified start date",
+    description: "Year, year-month or full ISO date, as recorded.",
+    validation: r => r.custom(validPeriod),
   }),
   defineField({
     name: "endDate",
-    type: "date",
+    type: "string",
     title: "Verified end date",
-    validation: (r) => r.min(r.valueOfField("startDate")),
+    description: "Leave empty for a current position.",
+    validation: r => r.custom((value, context) => {
+      const valid = validPeriod(value);
+      const start = (context.parent as {startDate?: string} | undefined)?.startDate;
+      if (valid !== true || !value || !start) return valid;
+      const precision = Math.min(start.length, value.length);
+      return value.slice(0, precision) >= start.slice(0, precision) || "The end precedes the start.";
+    }),
   }),
 ];
 const requiredString = (name: string, title: string) =>
@@ -126,6 +143,8 @@ const siteSettings = defineType({
       title: "Public contact email",
     }),
     loc("seoTitle", "Homepage SEO title"),
+    defineField({ name: "phone", title: "Public phone number", type: "string",
+      validation: r => r.regex(/^\+?[\d ()-]+$/) }),
     loc("seoDescription", "Homepage SEO description"),
   ],
   preview: { select: { title: "name" } },
@@ -207,6 +226,7 @@ const experience = defineType({
   preview: { select: { title: "position.en", subtitle: "company" } },
 });
 export const categories = [
+  "programming",
   "frontend",
   "backend",
   "database",

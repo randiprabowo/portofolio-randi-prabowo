@@ -1,0 +1,770 @@
+[
+  {
+    "_id": "siteSettings",
+    "_type": "siteSettings",
+    "name": "Randi Prabowo",
+    "roleTitle": {
+      "en": "Web Developer",
+      "id": "Web Developer",
+      "_type": "localized"
+    },
+    "location": {
+      "en": "Tanjung Karang Pusat, Lampung, Indonesia",
+      "id": "Tanjung Karang Pusat, Lampung, Indonesia",
+      "_type": "localized"
+    },
+    "email": "randiprabowo5@gmail.com",
+    "phone": "+62 895-2447-5887",
+    "heroIntro": {
+      "en": "Web developer specializing in the MERN Stack, React.js, and Next.js.",
+      "id": "Pengembang web dengan spesialisasi MERN Stack, React.js, dan Next.js.",
+      "_type": "localized"
+    },
+    "aboutSummary": {
+      "en": "Passionate Web Developer specializing in the MERN Stack, React.js, and Next.js, with experience in building responsive web applications, developing RESTful APIs, and managing databases using Python and PostgreSQL. Experienced in cross-functional team collaboration through real-world projects, including BROD Professional Social Network and EduAkses Online Learning Platform. Completed a 6-month Full Stack Development Bootcamp at Dicoding, with a strong interest in building scalable and user-focused software solutions.",
+      "id": "Saya menekuni pengembangan web dengan spesialisasi MERN Stack, React.js, dan Next.js. Saya berpengalaman membangun aplikasi web responsif, mengembangkan RESTful API, serta mengelola basis data menggunakan Python dan PostgreSQL. Saya bekerja sama dengan tim lintas fungsi dalam proyek BROD, jejaring sosial profesional, dan EduAkses, platform pembelajaran daring. Saya telah menyelesaikan bootcamp pengembangan full stack selama enam bulan di Dicoding dan tertarik membangun perangkat lunak yang dapat ditingkatkan skalanya dan berfokus pada kebutuhan pengguna.",
+      "_type": "localized"
+    },
+    "profileImage": {
+      "_type": "photo",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-f65e62cf4d7b444a31d05bf5a7ce2a40de114ff6-249x320-png"
+      },
+      "alt": {
+        "_type": "localized",
+        "en": "Portrait of Randi Prabowo",
+        "id": "Foto Randi Prabowo"
+      }
+    },
+    "resumeFile": {
+      "_type": "file",
+      "asset": {
+        "_type": "reference",
+        "_ref": "file-c6d6ab9fdda5a25a235de28021dc9ada8c9bfcaf-pdf"
+      }
+    },
+    "resumeLabel": {
+      "_type": "localized",
+      "en": "Download Resume",
+      "id": "Unduh CV"
+    },
+    "resumeLanguage": "en"
+  },
+  {
+    "_id": "experience-sdit",
+    "_type": "experience",
+    "position": {
+      "en": "School Resource Officer & Web Developer",
+      "id": "School Resource Officer & Web Developer",
+      "_type": "localized"
+    },
+    "company": "SDIT Fitrah Insani Langkapura",
+    "location": {
+      "en": "Bandar Lampung, Indonesia",
+      "id": "Bandar Lampung, Indonesia",
+      "_type": "localized"
+    },
+    "startDate": "2020-11",
+    "isCurrent": true,
+    "description": {
+      "en": "Develop and maintain the school website for functionality and updates. Manage digital resources systems to support school operations.",
+      "id": "Mengembangkan dan memelihara situs web sekolah agar berfungsi dengan baik dan tetap mutakhir. Mengelola sistem sumber daya digital untuk mendukung operasional sekolah.",
+      "_type": "localized"
+    },
+    "sortOrder": 1
+  },
+  {
+    "_id": "experience-solvera",
+    "_type": "experience",
+    "position": {
+      "en": "Backend Developer",
+      "id": "Backend Developer",
+      "_type": "localized"
+    },
+    "company": "Solvera Global Teknologi",
+    "location": {
+      "en": "Tangerang, Indonesia",
+      "id": "Tangerang, Indonesia",
+      "_type": "localized"
+    },
+    "startDate": "2026-01",
+    "endDate": "2026-07",
+    "description": {
+      "en": "Collaborated with a cross-functional team of 4 members, including Mobile Developers, Frontend Developers, Backend Developers, and a Product Owner, to develop a professional social networking platform.",
+      "id": "Bekerja dalam tim lintas fungsi beranggotakan empat orang untuk mengembangkan platform jejaring sosial profesional. Tim ini mencakup peran Mobile Developer, Frontend Developer, Backend Developer, dan Product Owner.",
+      "_type": "localized"
+    },
+    "sortOrder": 2
+  },
+  {
+    "_id": "experience-sentra",
+    "_type": "experience",
+    "position": {
+      "en": "Digital Marketing & Web Developer",
+      "id": "Digital Marketing & Web Developer",
+      "_type": "localized"
+    },
+    "company": "Sentra Masjid",
+    "location": {
+      "en": "Bandar Lampung, Indonesia",
+      "id": "Bandar Lampung, Indonesia",
+      "_type": "localized"
+    },
+    "startDate": "2019-11",
+    "endDate": "2020-01",
+    "description": {
+      "en": "Creating digital marketing content for social media and creating a Website using Wordpress",
+      "id": "Membuat konten pemasaran digital untuk media sosial dan membuat situs web menggunakan WordPress.",
+      "_type": "localized"
+    },
+    "sortOrder": 3
+  },
+  {
+    "_id": "project-brod",
+    "_type": "project",
+    "title": "BROD",
+    "slug": {
+      "_type": "slug",
+      "current": "brod"
+    },
+    "summary": {
+      "en": "Professional Social Network",
+      "id": "Jejaring sosial profesional",
+      "_type": "localized"
+    },
+    "role": {
+      "en": "Backend Developer (Team Member)",
+      "id": "Backend Developer (Team Member)",
+      "_type": "localized"
+    },
+    "techStack": [
+      "Python",
+      "PostgreSQL",
+      "RESTful APIs"
+    ],
+    "description": {
+      "en": [
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Developed and maintained backend services and RESTful APIs using Python to support core application features.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Designed and managed PostgreSQL database integration to support application data and user management.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Contributed to the development of key modules, including Contact Intelligence, Professional Feeds, Messaging, and Smart Networking.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p4",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Participated in Agile development workflows, team discussions, debugging, and API integration.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "id": [
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Mengembangkan dan memelihara layanan backend serta RESTful API menggunakan Python untuk mendukung fitur inti aplikasi.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Merancang dan mengelola integrasi basis data PostgreSQL untuk mendukung data aplikasi dan pengelolaan pengguna.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Berkontribusi dalam pengembangan modul utama, termasuk Contact Intelligence, Professional Feeds, Messaging, dan Smart Networking.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p4",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Terlibat dalam pengembangan dengan metode Agile, diskusi tim, penelusuran bug, dan integrasi API.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "_type": "rich"
+    },
+    "featured": true,
+    "sortOrder": 1
+  },
+  {
+    "_id": "project-eduakses",
+    "_type": "project",
+    "title": "EduAkses",
+    "slug": {
+      "_type": "slug",
+      "current": "eduakses"
+    },
+    "summary": {
+      "en": "Online Learning Platform (Capstone Project)",
+      "id": "Platform pembelajaran daring (proyek akhir)",
+      "_type": "localized"
+    },
+    "role": {
+      "en": "Full Stack Developer (Team Member)",
+      "id": "Full Stack Developer (Team Member)",
+      "_type": "localized"
+    },
+    "techStack": [
+      "React",
+      "RESTful API"
+    ],
+    "description": {
+      "en": [
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Collaborated in a 4-person team to design and build an MVP web application.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Developed responsive front-end components using React.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Implemented user management, learning modules, and RESTful API integration.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p4",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Practiced Agile development with regular discussions and problem-solving.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "id": [
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Merancang dan membangun aplikasi web dalam bentuk minimum viable product (MVP) bersama tim beranggotakan empat orang.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Mengembangkan komponen frontend yang responsif menggunakan React.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Membangun fitur pengelolaan pengguna dan modul pembelajaran, serta mengintegrasikan RESTful API.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "p4",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "text",
+              "text": "Menerapkan pengembangan Agile melalui diskusi rutin dan pemecahan masalah.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "_type": "rich"
+    },
+    "featured": true,
+    "sortOrder": 2
+  },
+  {
+    "_id": "skill-javascript",
+    "_type": "skill",
+    "name": "JavaScript",
+    "category": "programming",
+    "sortOrder": 1
+  },
+  {
+    "_id": "skill-2",
+    "_type": "skill",
+    "name": "Python",
+    "category": "programming",
+    "sortOrder": 2
+  },
+  {
+    "_id": "skill-0",
+    "_type": "skill",
+    "name": "React.js",
+    "category": "programming",
+    "sortOrder": 3
+  },
+  {
+    "_id": "skill-1",
+    "_type": "skill",
+    "name": "Next.js",
+    "category": "programming",
+    "sortOrder": 4
+  },
+  {
+    "_id": "skill-node-js",
+    "_type": "skill",
+    "name": "Node.js",
+    "category": "programming",
+    "sortOrder": 5
+  },
+  {
+    "_id": "skill-express-js",
+    "_type": "skill",
+    "name": "Express.js",
+    "category": "programming",
+    "sortOrder": 6
+  },
+  {
+    "_id": "skill-mongodb",
+    "_type": "skill",
+    "name": "MongoDB",
+    "category": "database",
+    "sortOrder": 7
+  },
+  {
+    "_id": "skill-mysql",
+    "_type": "skill",
+    "name": "MySQL",
+    "category": "database",
+    "sortOrder": 8
+  },
+  {
+    "_id": "skill-4",
+    "_type": "skill",
+    "name": "PostgreSQL",
+    "category": "database",
+    "sortOrder": 9
+  },
+  {
+    "_id": "skill-git",
+    "_type": "skill",
+    "name": "Git",
+    "category": "tools",
+    "sortOrder": 10
+  },
+  {
+    "_id": "skill-3",
+    "_type": "skill",
+    "name": "REST API",
+    "category": "tools",
+    "sortOrder": 11
+  },
+  {
+    "_id": "skill-vs-code",
+    "_type": "skill",
+    "name": "VS Code",
+    "category": "tools",
+    "sortOrder": 12
+  },
+  {
+    "_id": "skill-npm-yarn",
+    "_type": "skill",
+    "name": "NPM/Yarn",
+    "category": "tools",
+    "sortOrder": 13
+  },
+  {
+    "_id": "skill-5",
+    "_type": "skill",
+    "name": "Agile",
+    "category": "collaboration",
+    "sortOrder": 14
+  },
+  {
+    "_id": "skill-trello",
+    "_type": "skill",
+    "name": "Trello",
+    "category": "collaboration",
+    "sortOrder": 15
+  },
+  {
+    "_id": "skill-teamwork",
+    "_type": "skill",
+    "name": "Teamwork",
+    "category": "collaboration",
+    "sortOrder": 16
+  },
+  {
+    "_id": "skill-adobe-photoshop",
+    "_type": "skill",
+    "name": "Adobe Photoshop",
+    "category": "design",
+    "sortOrder": 17
+  },
+  {
+    "_id": "skill-canva",
+    "_type": "skill",
+    "name": "Canva",
+    "category": "design",
+    "sortOrder": 18
+  },
+  {
+    "_id": "skill-microsoft-office-suite",
+    "_type": "skill",
+    "name": "Microsoft Office Suite",
+    "category": "design",
+    "sortOrder": 19
+  },
+  {
+    "_id": "education-0",
+    "_type": "education",
+    "title": {
+      "en": "Bachelor of Information Systems",
+      "id": "Sarjana Sistem Informasi",
+      "_type": "localized"
+    },
+    "institution": "Universitas Teknokrat Indonesia",
+    "kind": "education",
+    "startDate": "2015",
+    "endDate": "2019",
+    "sortOrder": 0
+  },
+  {
+    "_id": "education-1",
+    "_type": "education",
+    "title": {
+      "en": "Full Stack Developer Bootcamp",
+      "id": "Full Stack Developer Bootcamp",
+      "_type": "localized"
+    },
+    "institution": "Dicoding Indonesia",
+    "kind": "bootcamp",
+    "startDate": "2025-03",
+    "endDate": "2025-09",
+    "sortOrder": 1
+  },
+  {
+    "_id": "education-2",
+    "_type": "education",
+    "title": {
+      "en": "React JS Bootcamp",
+      "id": "React JS Bootcamp",
+      "_type": "localized"
+    },
+    "institution": "WPU Course",
+    "kind": "bootcamp",
+    "startDate": "2025-04",
+    "endDate": "2025-05",
+    "sortOrder": 2
+  },
+  {
+    "_id": "education-3",
+    "_type": "education",
+    "title": {
+      "en": "Front End Developer Bootcamp",
+      "id": "Front End Developer Bootcamp",
+      "_type": "localized"
+    },
+    "institution": "Harisenin.com",
+    "kind": "bootcamp",
+    "startDate": "2024-08",
+    "endDate": "2025-01",
+    "sortOrder": 3
+  },
+  {
+    "_id": "cert-dicoding-react-web-developer-expert",
+    "_type": "education",
+    "title": {
+      "en": "React Web Developer Expert",
+      "id": "React Web Developer Expert",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 4
+  },
+  {
+    "_id": "cert-dicoding-code-generation-and-optimization-using-ibm-granite",
+    "_type": "education",
+    "title": {
+      "en": "Code Generation and Optimization Using IBM Granite",
+      "id": "Code Generation and Optimization Using IBM Granite",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 5
+  },
+  {
+    "_id": "cert-dicoding-pursuing-a-career-as-a-software-developer",
+    "_type": "education",
+    "title": {
+      "en": "Pursuing a Career as a Software Developer",
+      "id": "Pursuing a Career as a Software Developer",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 6
+  },
+  {
+    "_id": "cert-dicoding-prompt-engineering-for-software-developers",
+    "_type": "education",
+    "title": {
+      "en": "Prompt Engineering for Software Developers",
+      "id": "Prompt Engineering for Software Developers",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 7
+  },
+  {
+    "_id": "cert-dicoding-practical-ai-for-productivity",
+    "_type": "education",
+    "title": {
+      "en": "Practical AI for Productivity",
+      "id": "Practical AI for Productivity",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 8
+  },
+  {
+    "_id": "cert-dicoding-learning-back-end-for-beginners-with-javascript",
+    "_type": "education",
+    "title": {
+      "en": "Learning Back-End for Beginners with JavaScript",
+      "id": "Learning Back-End for Beginners with JavaScript",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 9
+  },
+  {
+    "_id": "cert-dicoding-learning-back-end-fundamentals-with-javascript",
+    "_type": "education",
+    "title": {
+      "en": "Learning Back-End Fundamentals with JavaScript",
+      "id": "Learning Back-End Fundamentals with JavaScript",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 10
+  },
+  {
+    "_id": "cert-dicoding-learning-to-use-generative-ai",
+    "_type": "education",
+    "title": {
+      "en": "Learning to Use Generative AI",
+      "id": "Learning to Use Generative AI",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 11
+  },
+  {
+    "_id": "cert-dicoding-learning-web-application-fundamentals-with-react",
+    "_type": "education",
+    "title": {
+      "en": "Learning Web Application Fundamentals with React",
+      "id": "Learning Web Application Fundamentals with React",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 12
+  },
+  {
+    "_id": "cert-dicoding-learning-to-build-web-applications-with-react",
+    "_type": "education",
+    "title": {
+      "en": "Learning to Build Web Applications with React",
+      "id": "Learning to Build Web Applications with React",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 13
+  },
+  {
+    "_id": "cert-dicoding-learning-to-build-web-front-ends-for-beginners",
+    "_type": "education",
+    "title": {
+      "en": "Learning to Build Web Front-Ends for Beginners",
+      "id": "Learning to Build Web Front-Ends for Beginners",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 14
+  },
+  {
+    "_id": "cert-dicoding-learn-git-basics-with-github",
+    "_type": "education",
+    "title": {
+      "en": "Learn Git Basics with GitHub",
+      "id": "Learn Git Basics with GitHub",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 15
+  },
+  {
+    "_id": "cert-dicoding-introduction-to-programming-logic",
+    "_type": "education",
+    "title": {
+      "en": "Introduction to Programming Logic",
+      "id": "Introduction to Programming Logic",
+      "_type": "localized"
+    },
+    "institution": "Dicoding",
+    "kind": "certification",
+    "sortOrder": 16
+  },
+  {
+    "_id": "social-linkedin",
+    "_type": "socialLink",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/randiprabowo-1152861a6",
+    "label": {
+      "en": "LinkedIn",
+      "id": "LinkedIn",
+      "_type": "localized"
+    },
+    "enabled": true,
+    "sortOrder": 1
+  }
+]
