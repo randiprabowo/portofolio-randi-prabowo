@@ -1,0 +1,257 @@
+[
+  {
+    "_id": "siteSettings",
+    "_type": "siteSettings",
+    "name": "Randi Prabowo",
+    "roleTitle": {
+      "en": "Web Developer",
+      "id": "Pengembang Web"
+    },
+    "location": {
+      "en": "Bandar Lampung, Indonesia",
+      "id": "Bandar Lampung, Indonesia"
+    },
+    "tagline": {
+      "en": "Full Stack & Backend Development",
+      "id": "Pengembangan Full Stack & Backend"
+    },
+    "heroIntro": {
+      "en": "MERN Stack, React.js, Next.js, RESTful APIs, Python, and PostgreSQL.",
+      "id": "MERN Stack, React.js, Next.js, RESTful API, Python, dan PostgreSQL."
+    },
+    "aboutSummary": {
+      "en": "Web Developer specializing in the MERN Stack, React.js, and Next.js, with experience in building responsive web applications, developing RESTful APIs, and managing databases using Python and PostgreSQL.",
+      "id": "Pengembang web dengan spesialisasi MERN Stack, React.js, dan Next.js. Berpengalaman membangun aplikasi web responsif, mengembangkan RESTful API, dan mengelola basis data menggunakan Python dan PostgreSQL."
+    }
+  },
+  {
+    "_id": "project-brod",
+    "_type": "project",
+    "title": "BROD",
+    "slug": {
+      "current": "brod",
+      "_type": "slug"
+    },
+    "summary": {
+      "en": "Professional Social Network",
+      "id": "Jejaring sosial profesional"
+    },
+    "role": {
+      "en": "Backend Developer · Team Member",
+      "id": "Pengembang Backend · Anggota Tim"
+    },
+    "techStack": [
+      "Python",
+      "PostgreSQL",
+      "REST API"
+    ],
+    "description": {
+      "en": [
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Developed backend services and RESTful APIs using Python. Integrated PostgreSQL and contributed to Contact Intelligence, Professional Feeds, Messaging, and Smart Networking.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "id": [
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Mengembangkan layanan backend dan RESTful API dengan Python, mengintegrasikan PostgreSQL, serta berkontribusi pada modul Contact Intelligence, Professional Feeds, Messaging, dan Smart Networking.",
+              "marks": []
+            }
+          ]
+        }
+      ]
+    },
+    "featured": true,
+    "sortOrder": 1
+  },
+  {
+    "_id": "project-eduakses",
+    "_type": "project",
+    "title": "EduAkses",
+    "slug": {
+      "current": "eduakses",
+      "_type": "slug"
+    },
+    "summary": {
+      "en": "Online Learning Platform",
+      "id": "Platform pembelajaran daring"
+    },
+    "role": {
+      "en": "Full Stack Developer · Team Member",
+      "id": "Pengembang Full Stack · Anggota Tim"
+    },
+    "techStack": [
+      "React"
+    ],
+    "description": {
+      "en": [
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Built responsive learning interfaces using React. Worked on user management, learning modules, and REST API integration as part of a four-person MVP team.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "id": [
+        {
+          "_type": "block",
+          "_key": "p1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Membangun antarmuka pembelajaran responsif dengan React. Mengerjakan pengelolaan pengguna, modul pembelajaran, dan integrasi REST API dalam tim MVP beranggotakan empat orang.",
+              "marks": []
+            }
+          ]
+        }
+      ]
+    },
+    "featured": false,
+    "sortOrder": 2
+  },
+  {
+    "_type": "experience",
+    "_id": "experience-sdit",
+    "company": "SDIT Fitrah Insani Langkapura",
+    "position": {
+      "en": "School Resource Officer & Web Developer",
+      "id": "Petugas Sumber Daya Sekolah & Pengembang Web"
+    },
+    "sortOrder": 1
+  },
+  {
+    "_type": "experience",
+    "_id": "experience-sentra",
+    "company": "Sentra Masjid",
+    "position": {
+      "en": "Digital Marketing & Web Developer",
+      "id": "Pemasaran Digital & Pengembang Web"
+    },
+    "sortOrder": 3
+  },
+  {
+    "_type": "skill",
+    "_id": "skill-0",
+    "name": "React.js",
+    "category": "frontend",
+    "sortOrder": 0
+  },
+  {
+    "_type": "skill",
+    "_id": "skill-1",
+    "name": "Next.js",
+    "category": "frontend",
+    "sortOrder": 1
+  },
+  {
+    "_type": "skill",
+    "_id": "skill-2",
+    "name": "Python",
+    "category": "backend",
+    "sortOrder": 2
+  },
+  {
+    "_type": "skill",
+    "_id": "skill-3",
+    "name": "REST API",
+    "category": "backend",
+    "sortOrder": 3
+  },
+  {
+    "_type": "skill",
+    "_id": "skill-4",
+    "name": "PostgreSQL",
+    "category": "database",
+    "sortOrder": 4
+  },
+  {
+    "_type": "skill",
+    "_id": "skill-5",
+    "name": "Agile",
+    "category": "collaboration",
+    "sortOrder": 5
+  },
+  {
+    "_type": "education",
+    "_id": "education-0",
+    "title": {
+      "en": "Bachelor of Information Systems",
+      "id": "Sarjana Sistem Informasi"
+    },
+    "institution": "Universitas Teknokrat Indonesia",
+    "kind": "education",
+    "sortOrder": 0
+  },
+  {
+    "_type": "education",
+    "_id": "education-1",
+    "title": {
+      "en": "Full Stack Developer Bootcamp",
+      "id": "Bootcamp Pengembangan Full Stack"
+    },
+    "institution": "Dicoding Indonesia",
+    "kind": "bootcamp",
+    "sortOrder": 1
+  },
+  {
+    "_type": "education",
+    "_id": "education-2",
+    "title": {
+      "en": "React JS Bootcamp",
+      "id": "Bootcamp React JS"
+    },
+    "institution": "WPU Course",
+    "kind": "bootcamp",
+    "sortOrder": 2
+  },
+  {
+    "_type": "education",
+    "_id": "education-3",
+    "title": {
+      "en": "Front End Developer Bootcamp",
+      "id": "Bootcamp Pengembangan Frontend"
+    },
+    "institution": "Harisenin.com",
+    "kind": "bootcamp",
+    "sortOrder": 3
+  },
+  {
+    "_id": "drafts.experience-solvera",
+    "_type": "experience",
+    "company": "Solvera",
+    "position": {
+      "en": "Backend Developer",
+      "id": "Pengembang Backend"
+    },
+    "sortOrder": 2
+  }
+]
